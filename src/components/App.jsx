@@ -1,15 +1,13 @@
-import { useState } from 'react'
 import '../App.css'
 import NavBar from './NavBar'
-import ItemListContainer from './ItemListContainer'
+import Main from './Main'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
-     <NavBar/>
-     <ItemListContainer greeting="Saludos!"/>
+      <NavBar />
+      <Main />
     </>
   )
 }
