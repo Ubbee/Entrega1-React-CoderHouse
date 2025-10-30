@@ -12,11 +12,11 @@ export default function Item(prop) {
 
 
   return (
-    <>
+    <div className='card'>
       <img src={prop.productos.images?.[0]} width={100} alt="Producto" />
       <h2>{prop.productos.title}</h2>
       <p >$ {prop.productos.price}</p>
       <button ><Link to={`/productos/${prop.productos.id}`}>Ver Mas...</Link></button>
-    </>
+    </div>
   )
 }

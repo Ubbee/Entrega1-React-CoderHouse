@@ -41,3 +41,13 @@ body,
   justify-content: center;
   align-items: center;
 }
+.card{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  box-shadow: 0px 0px 10px 0px;
+  width: 200px;
+  border-radius: 10px;
+}
