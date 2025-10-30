@@ -1,29 +1,34 @@
+import React, { useEffect, useState } from "react";
+import { Link, useParams } from "react-router";
+import Item from "./Item";
+import { Flex } from "antd";
 
 export default function ItemListContainer() {
-  const url = `https://dummyjson.com/products/`
-  fetch(url)
-    .then(data => data.json())
-    .then((data) => {
-      const result = data.products
-      console.log(result);
+  const params = useParams()
 
-      return (
-        result.forEach((_, i) => {
+  const [productos, setProductos] = useState([])
+  useEffect(() => {
+    fetch(`https://dummyjson.com/products/`)
+      .then(data => data.json())
+      .then((data) => {
+        const result = data.products
+        setProductos(result)
+      })
+  }, []);
+  const [value, setValue] = React.useState('horizontal');
 
-          <div >
-            <img src={result[i].images} alt="Producto" />
-            <h2>{result[i].title}</h2>
-            <p >$ {result[i].price}</p>
-            <button >Agregar al carrito</button>
-          </div>
+  const EstiloBase = {
+    width: '25%',
+    height: 54
+  };
 
-        })
-      );
-
-
-
-    })
-
+  return (
+    <Flex gap="middle" wrap="wrap" className="contenedor">
+      {productos.map((producto) => {
+        return <Item productos={producto} />
+      })}
+    </Flex>
+  );
 
 
 }

@@ -1,30 +1,43 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-html, body, #root {
+
+html,
+body,
+#root {
   height: 100%;
   margin: 0;
   padding: 0;
 }
+
 #root {
   text-align: center;
   width: 100%;
 }
-.headerContainer{
+
+.headerContainer {
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: rgb(0, 196, 121);
   padding: 20px;
 }
-.iconosHeader{
+
+.iconosHeader {
   display: flex;
   list-style: none;
   font-size: 1rem;
-  
+
 }
-.iconosHeader li{
+
+.iconosHeader li {
   margin-right: 10px;
+}
+
+.contenedor {
+  padding: 50px 20px;
+  justify-content: center;
+  align-items: center;
 }

@@ -1,7 +1,7 @@
 import React from 'react'
 import { ShoppingCart } from 'lucide-react';
 
-export default function cartWidget() {
+export default function CartWidget() {
   return (
     <div>cartWidget</div>
   )
