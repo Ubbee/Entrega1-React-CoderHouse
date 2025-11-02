@@ -12,4 +12,3 @@ export default function Main() {
         </Routes>
     )
 }
-//https://dummyjson.com/products
